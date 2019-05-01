@@ -10,34 +10,34 @@ require 'async'
 # example function that takes a random ammount of time to complete
 # now with a timeout
 def example(id)
-  Async do |task|
-    task.with_timeout(0.5) do
-      value = rand # get random value
-      puts "Putting #{id} to sleep for #{value} seconds."
-      task.sleep(value)
-      puts "#{id} woke up!"
-    rescue Async::TimeoutError
-      puts "#{id} timed out!"
-    end
-  end
+	Async do |task|
+		task.with_timeout(0.5) do
+			value = rand # get random value
+			puts "Putting #{id} to sleep for #{value} seconds."
+			task.sleep(value)
+			puts "#{id} woke up!"
+		rescue Async::TimeoutError
+			puts "#{id} timed out!"
+		end
+	end
 end
 
 # asynchronously run five example functions
 Async do
-  5.times do |index|
-    example(index)
-  end
+	5.times do |index|
+		example(index)
+	end
 end
 ```
 
 ## Run the Script
 
-Once we add the code to `script.rb`, we can run it:
-`ruby script.rb`{{executr}}
+Once we add the code to `script.rb`, we can run it: `ruby script.rb`{{executr}}
 
 Which will print something like:
+
 ```
-ruby step3.rb 
+ruby step3.rb
 Putting 0 to sleep for 0.799244934361936 seconds.
 Putting 1 to sleep for 0.744209168995344 seconds.
 Putting 2 to sleep for 0.4548160280128716 seconds.
