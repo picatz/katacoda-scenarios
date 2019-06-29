@@ -12,4 +12,4 @@ To redirect the output of the application to a file:
 
 Then we can use tools like [`cat`](https://en.wikipedia.org/wiki/Cat_(Unix)) and [`grep`](https://en.wikipedia.org/wiki/Grep) the file to filter the results:
 
-`cat /tmp/job-postings | grep -i "python"`
+`cat /tmp/job-postings | grep -i "python"`{{execute}}
