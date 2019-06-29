@@ -1,0 +1,36 @@
+{
+    "title": "Job Hunter Toolkit",
+    "description": "Finding jobs with a CLI made easy.",
+    "details": {
+      "steps": [
+        {
+          "title": "Install",
+          "text": "install.md"
+        },
+        {
+          "title": "Help Menu",
+          "text": "help-menu.md"
+        },
+        {
+          "title": "Job Sources",
+          "text": "job-sources.md"
+        },
+        {
+          "title": "Job Postings",
+          "text": "job-postings.md"
+        }
+      ],
+      "intro": {
+        "text": "intro.md"
+      },
+      "finish": {
+        "text": "finish.md"
+      }
+    },
+    "environment": {
+      "uilayout": "terminal"
+    },
+    "backend": {
+      "imageid": "go"
+    }
+  }
